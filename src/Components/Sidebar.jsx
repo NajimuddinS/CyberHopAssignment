@@ -24,8 +24,8 @@ const Sidebar = () => {
             {item.name}
           </h2>
         ))}
-        <a href="">
-        <h2 className='active'>Logout</h2>
+        <a href="https://cybhop.netlify.app/login">
+         <h2 className='active'>Logout</h2>
         </a>
       </div>
       
