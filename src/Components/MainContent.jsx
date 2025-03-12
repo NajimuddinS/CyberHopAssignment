@@ -53,23 +53,22 @@ const MainContent = () => {
         <div 
           style={{
             display: "flex",
-            justifyContent: "space-between", // Space between the bars
-            height: "200px", // Height of the container
-            alignItems: "flex-end", // Align the bars to the bottom
+            justifyContent: "space-between",
+            height: "200px",
+            alignItems: "flex-end",
             paddingBottom: "0px", 
           }}
         >
-          {/* Render 10 thick bars with different heights */}
           {Array.from({ length: 10 }).map((_, index) => {
-            const barHeight = Math.floor(Math.random() * 200) + 20; // Random height between 20px and 220px
+            const barHeight = Math.floor(Math.random() * 200) + 20; 
             return (
               <div
                 key={index}
                 style={{
-                  width: "20px", // Thicker bars
-                  height: `${barHeight}px`, // Random height
-                  backgroundColor: "#3399ff", // Blue color
-                  marginRight: "5px", // Less space between bars
+                  width: "20px",
+                  height: `${barHeight}px`,
+                  backgroundColor: "#3399ff", 
+                  marginRight: "5px",
                 }}
               />
             );
