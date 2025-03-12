@@ -38,7 +38,7 @@ This project displays detailed information about Pokémon fetched dynamically fr
    ```
 
 ## Deployment
-- The project is deployed at: [CyberHop](https://cybhop.netlify.app/login)
+- The project is deployed at: [CyberHop](https://cybhop.netlify.app)
 
 ## Technologies Used
 - **React.js** for UI development.
