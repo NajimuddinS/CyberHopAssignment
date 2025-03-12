@@ -1,12 +1,63 @@
-# React + Vite
+# Pokemon Details Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project displays detailed information about Pokémon fetched dynamically from the [PokéAPI](https://pokeapi.co/). It also implements user authentication using [Reqres](https://reqres.in/) for login validation.
 
-Currently, two official plugins are available:
+## Features
+- Fetches Pokémon details including name, type, and stats from PokéAPI.
+- Displays Pokémon type distribution with progress bars.
+- User authentication via Reqres API.
+- Responsive UI with a clean design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## API Integrations
+### PokéAPI
+- Endpoint: `https://pokeapi.co/api/v2/pokemon`
+- Fetches Pokémon details such as name, type, and abilities.
 
-## Expanding the ESLint configuration
+### Reqres API (User Authentication)
+- Endpoint: `https://reqres.in/api/login`
+- Sample Credentials:
+  - **Email:** `george.bluth@reqres.in`
+  - **Password:** *(any password works)*
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Setup Instructions
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/NajimuddinS/CyberHopAssignment.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd CyberHopAssignment
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Run the application:
+   ```sh
+   npm run dev
+   ```
+
+## Deployment
+- The project is deployed at: [CyberHop](https://cybhop.netlify.app/login)
+
+## Technologies Used
+- **React.js** for UI development.
+- **PokéAPI** for fetching Pokémon data.
+- **Reqres API** for user authentication.
+- **CSS** for styling and responsiveness.
+
+## Links
+- **GitHub Repository:** [CyberHopAssignment](https://github.com/NajimuddinS/CyberHopAssignment)
+- **Live Demo:** [CyberHop](https://cybhop.netlify.app/login)
+
+---
+
+### Future Enhancements
+- Implement search functionality for Pokémon.
+- Add individual Pokémon detail pages.
+- Improve authentication with JWT.
+
+---
+
+Feel free to contribute or provide feedback! 🚀
+
