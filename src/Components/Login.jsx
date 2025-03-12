@@ -49,7 +49,7 @@
                 id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
+                placeholder="george.bluth@reqres.in"
                 required
               />
             </div>
@@ -58,7 +58,7 @@
               <input
                 type="password"
                 id="password"
-                placeholder="Enter you password"
+                placeholder="Enter any Text"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
