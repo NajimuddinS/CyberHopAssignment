@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 
 const ExpenseItem = ({ icon, name, type, statName, statValue }) => (
   <div className="expense-item">
@@ -18,7 +17,7 @@ const MainContent = () => {
 
   useEffect(() => {
     const fetchPokemon = async () => {
-      const pokemonNames = ["pikachu", "charizard", "bulbasaur", "venusaur","onix"];
+      const pokemonNames = ["pikachu", "charizard", "bulbasaur", "venusaur", "onix"];
       const fetchedData = await Promise.all(
         pokemonNames.map(async (name) => {
           const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
@@ -27,8 +26,8 @@ const MainContent = () => {
             name: data.name,
             icon: data.sprites.front_default,
             type: data.types[0].type.name,
-            statName: data.stats[1].stat.name, 
-            statValue: data.stats[1].base_stat, 
+            statName: data.stats[1].stat.name,
+            statValue: data.stats[1].base_stat,
           };
         })
       );
@@ -51,14 +50,31 @@ const MainContent = () => {
         />
       </div>
       <div className="stats-chart">
-        <ResponsiveContainer width="80%" height={300}>
-          <BarChart data={pokemonData}>
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Bar dataKey="statValue" fill="#ffcc00" />
-          </BarChart>
-        </ResponsiveContainer>
+        <div 
+          style={{
+            display: "flex",
+            justifyContent: "space-between", // Space between the bars
+            height: "200px", // Height of the container
+            alignItems: "flex-end", // Align the bars to the bottom
+            paddingBottom: "0px", 
+          }}
+        >
+          {/* Render 10 thick bars with different heights */}
+          {Array.from({ length: 10 }).map((_, index) => {
+            const barHeight = Math.floor(Math.random() * 200) + 20; // Random height between 20px and 220px
+            return (
+              <div
+                key={index}
+                style={{
+                  width: "20px", // Thicker bars
+                  height: `${barHeight}px`, // Random height
+                  backgroundColor: "#3399ff", // Blue color
+                  marginRight: "5px", // Less space between bars
+                }}
+              />
+            );
+          })}
+        </div>
       </div>
       <div className="expenses">
         <h2>Pokémon Details</h2>

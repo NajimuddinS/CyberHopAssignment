@@ -99,7 +99,7 @@ body {
   width: 500px;
   margin-top: 30px;
   margin-bottom: 30px;
-  height: 1100px;
+  height: 950px;
   top: 20px;
   left: 360px;
   flex-grow: 1;
@@ -181,7 +181,7 @@ body {
   margin-bottom: 30px;
   border-right: 30px;
   width: 400px;
-  height: 1100px;
+  height: 950px;
   background-color: #f9fafc;
   padding: 40px;
 }
@@ -229,16 +229,24 @@ body {
   position: relative;
   background-color: #edf0f6;
   border: 0px solid #979797;
-  margin-top: 180px;
   border-radius: 15px;
   padding: 24px;
 }
 
+.tips-img {
+  position: relative;
+  display:flex;
+  gap:100px;
+  z-index: 3;
+  bottom: 50px;
+}
+
+
 .tips-box img {
-  margin-left: 200px;
-  width: 84px;
+  /* margin-left: 200px; */
+  /* width: 84px; */
   height: 112px;
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
 }
 
 .tips-box h3 {

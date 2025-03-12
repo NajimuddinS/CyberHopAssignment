@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import illustration from '../assets/Illustration.png'
 
 const RightContent = () => {
   const [pokemonTypes, setPokemonTypes] = useState([]);
@@ -6,7 +7,6 @@ const RightContent = () => {
   const fetchAllPokemonNames = async () => {
     let allPokemon = [];
     let nextUrl = "https://pokeapi.co/api/v2/pokemon?limit=1000";
-
     while (nextUrl) {
       const res = await fetch(nextUrl);
       const data = await res.json();
@@ -62,7 +62,10 @@ const RightContent = () => {
         ))}
       </div>
       <div className="tips-box">
-        <img src="https://dashboard.codeparrot.ai/api/image/Z9Bt0ed_tb-16vI0/illustra.png" alt="Illustration" />
+        <div className="tips-img">
+          <img src={illustration} alt="" />
+          <img src="https://dashboard.codeparrot.ai/api/image/Z9Bt0ed_tb-16vI0/illustra.png" alt="Illustration" />
+        </div>
         <h3>Learn About Pokémon</h3>
         <p>Discover different Pokémon types and their strengths in battles!</p>
         <button className="tip-button">VIEW DETAILS</button>
